@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 2, 2, 0.432);
+    overflow: hidden;
+    animation: col 18s linear infinite;
+    
+  }
+  
+  
+  @keyframes col {
+  to {
+        filter: hue-rotate(360deg);
+  }
+  }
+  
+  
+  .cube {
+    width: 200px;
+    height: 200px;
+    transform: rotateX(60deg) rotate(45deg);
+    transform-style: preserve-3d;
+    top: -100px;
+    animation: rot 8s linear infinite;
+  }
+  
+  @keyframes rot {
+  0% {
+      transform: rotateX(60deg) rotate(45deg);
+  }
+  100% {
+      transform: rotateX(60deg) rotate(405deg);
+  }
+  }
+  
+  .cube > div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: rgb(15, 14, 14);
+  }
+  
+  #left {
+    left: 0;
+    top: 0;
+    transform-origin: left;
+    transform: rotateY(90deg);
+    background: linear-gradient(90deg, #222, #00e7ff);
+  }
+  
+  #right {
+    right: 0;
+    top: 0;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+    background: linear-gradient(-90deg, #222, #00e7ff);
+  }
+  
+  #front {
+    right: 0;
+    top: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    background: linear-gradient(180deg, #222, #00e7ff);
+  }
+  
+  #back {
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    background: linear-gradient(0deg, #222, #00e7ff);
+  }
+  
+  #top {
+    background: rgb(57, 57, 57);
+  }
+  
+  #bottom {
+    background: #00e7ffbf;
+    width: 175px;
+    height: 175px;
+    left: 12px;
+    top: 12px;
+    transform: translateZ(-220px);
+    filter: blur(5px);
+    box-shadow: 0 0 160px 40px #00e7ffbf;
+  }
+  .part2{
+    align-items: flex-end;
+    color: peru;
+    margin: 0 auto;
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-around;
+    font-style: italic;
+    height: 600px;
+    /* padding-left: 200px; */
+  
+  
+  }
+  span{
+    color: red;
+  }
+  h2{
+    padding-left: 200px;
+  }
